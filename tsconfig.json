@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    /* syntax check */
+    "target": "esnext",
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "importHelpers": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true, // or just 'false' to turn off import warning
+    /* build config */
+    "module": "commonjs",
+    // come together
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ],
+      "@/*": [
+        "src/*"
+      ],
+      "@material": [
+        "node_modules/vue-material/dist/components"
+      ],
+    },
+    "jsx": "preserve",
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "outDir": "build",
+    // easy to debug
+    "sourceMap": true,
+    "removeComments": true,
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+  ],
+}

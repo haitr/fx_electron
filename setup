@@ -1,0 +1,26 @@
+#!/bin/bash
+
+command_exists () {
+    type "$1" &> /dev/null;
+}
+
+echo Start installing dependencies..
+
+# Install yarn
+if command_exists yarn;
+then
+    echo yarn exists.
+else
+    curl -o- -L https://yarnpkg.com/install.sh | bash
+fi
+# Install package-yml
+# package='@vue/cli'
+# if [ `yarn global list $package | grep -c $package` -eq 0 ];
+# then
+#     yarn global add @vue/cli
+# else 
+#     echo $package exists.
+# fi
+#
+yarn
+echo Done.

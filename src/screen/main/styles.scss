@@ -1,0 +1,50 @@
+@import 'vue-material/dist/vue-material';
+@import 'vue-material/dist/theme/default';
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #2a2e43;
+
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    img  {
+      display: block;
+      max-width: 150px;
+      width: auto;
+      margin-bottom: 16px;
+    }
+
+    #form {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+
+      .md-field {        
+        // placeholder and helper
+        label, span.md-helper-text {
+          color: white;
+        }
+        // text
+        input {
+          -webkit-text-fill-color: white;
+        }
+        // underline
+        &:after {
+          background-color: #ffffff54;
+        }
+        // button icon
+        svg {
+          fill: #ffffff33;
+        }
+      }
+
+    }
+  }
+}
